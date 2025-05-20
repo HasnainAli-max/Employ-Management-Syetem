@@ -1,15 +1,14 @@
 import mongoose from "mongoose";
-import colors from 'colors'
 
 const dbConnection = async()=>{
     try {
 
         await mongoose.connect("mongodb://localhost:27017/FenalProject")
-        console.log(`Database connected successfully`.bgGreen)
+        console.log(`Database connected successfully`)
 
     } catch (error) {
 
-        console.log(`Error in DB Connection`.bgRed)
+        console.log(`Error in DB Connection`)
     }
 }
 export default dbConnection

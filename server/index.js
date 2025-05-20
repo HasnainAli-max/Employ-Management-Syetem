@@ -1,5 +1,4 @@
 import express from 'express'
-import colors from 'colors'
 import dbConnection from './database/dbcon.js'
 import cors from 'cors'
 import listRouter from './routers/userList.js'
@@ -28,7 +27,7 @@ app.use(newsignuproute)
 
 try {
         mongoose.connect("mongodb+srv://hasnainaliconsole:kDe4awBxXUyPwffy@novu-pk.rzwglve.mongodb.net/?retryWrites=true&w=majority&appName=Novu-pk")
-.then(() => console.log("Connected to MongoDB".bgGreen))
+.then(() => console.log("Connected to MongoDB"))
 } catch (error) {
         
 }
@@ -72,5 +71,5 @@ app.put("/users/:id", async(req, res)=>{
 
 
 app.listen(port,()=>{
-    console.log(`Server is started at port ${port}`.bgMagenta)
+    console.log(`Server is started at port ${port}`)
 })
